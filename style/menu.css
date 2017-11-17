@@ -1,11 +1,8 @@
-.menu{
-  display: flex;
-}
-.foodItem {
+.top{
   display: flex;
   flex-direction: column;
 }
-.foodItem .header{
+  .header{
   display: flex;
   flex-direction: row;
 }
@@ -15,22 +12,22 @@
 .cost{
   flex: 1;
 }
-.ingredients{
+.games{
   display: flex;
-  margin: 4px;
-  padding: 0px;
-  border: 2px solid green;
-  box-shadow: 1px 1px 2px #dddddd;
+  margin: 20px;
+  padding: 2px;
+  border: 5px solid #696969;
+  box-shadow: 8px 8px 16px #dddddd;
   flex-direction:column;
 }
-.ingredients:before{
-  content: "Ingredients";
+.games:before{
+  content: "games";
   font-weight: bold;
-  background: #00AA00;
-  color: #DDFFDD;
+  background: #b22222;
+  color: #000000;
 }
 
-.ingredient, .ingredients:before{
+.game, .games:before{
   flex: 1;
   padding: 0.5em;
 }
