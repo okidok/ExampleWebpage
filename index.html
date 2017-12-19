@@ -2,53 +2,83 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style/menu.css"/>
+    <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-    <h1>Its high noon</h1>
-    <div class="content">
+    <h1>Staem</h1>
+    <div class="content" id="app">
+
+
+
       <div class="top">
         <div>
-        <div class="header">
-          <div class="cost">$40.00</div>
+        <div class="header"></div>
+        <div class="fps">
+          <div v-for="first in first">
+             <a :href="first.link">{{ first.name }}</a>
+            <div> {{ first.price}} </div>
         </div>
-        <div class="games">
-          <div class="game">star war batlefrnt too (not the bad one)</div>
-          <div class="game">Age of empir 2 aech dee edition </div>
-          <div class="game">cuphed</div>
-          <div class="game">dyin lihgt</div>
-          <div class="game">paydai to</div>
-        </div>
+
+      </div>
       </div>
 
-      <div class="header">
-        <div class="cost">$10.00</div>
-      </div>
-      <div class="games">
-        <div class="game">Dont starv</div>
-        <div class="game">skullgirlz</div>
-        <div class="game">overthot</div>
-        <div class="game">terrariea</div>
-        <div class="game">skyrum</div>
-      </div>
+        <div class="header"></div>
+        <div class="singleplayer">
+        <div v-for="single in single">
+           <a :href="single.link">{{ single.name }}</a>
+          <div> {{ single.price}} </div>
+        </div>
+        </div>
 
-      <div class="header">
-        <div class="cost">$15.00</div>
-      </div>
-      <div class="games">
-        <div class="game">dank souls</div>
-        <div class="game">team funtress 2</div>
-        <div class="game">ded by dedlight</div>
-        <div class="game">falloot</div>
-        <div class="game">minecrap</div>
-        <div class="game">burderlunds 2</div>
-        <div class="game">half lif 3</div>
-      </div>
+        <div class="header"></div>
+        <div class="multiplayer">
+        <div v-for="multip in multip">
+           <a :href="multip.link">{{ multip.name }}</a>
+          <div> {{ multip.price}} </div>
     </div>
-      <button
-      type="button">Click Me!
-      </button>
+  </div>
+
 
       </div>
     </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data :{
+          first: [
+            {name: "star war batlefrnt too (not the bad one)", price: "  $10.00", link: "http://store.steampowered.com/app/6060/Star_Wars_Battlefront_2_Classic_2005/" },
+            {name: "burderlunds 2", price: "  $20.00", link: "http://store.steampowered.com/app/49520/Borderlands_2/" },
+            {name: "overthot", price: "  $40.00", link: "https://playoverwatch.com/en-us/"},
+            {name: "half lif 3", price: "  $800.00", link: "http://knowyourmeme.com/memes/half-life-3-confirmed"},
+            {name: "team funtress 2", price: "  $free", link: "http://www.teamfortress.com/"},
+            {name: "paydai to", price: "  45.00", link: "http://store.steampowered.com/app/218620/PAYDAY_2/"},
+          ],
+          single: [
+            {name: "Dont starv", price: "  $5:00", link: "https://www.klei.com/games/dont-starve"},
+            {name: "cuphed", price: "  $20.00", link: "http://store.steampowered.com/app/268910/Cuphead/"},
+            {name: "dank souls", price: "  $20.00", link: "https://www.youtube.com/watch?v=mp28JPs25ek"},
+            {name: "skullgirlz", price: "  $10.00", link: "http://store.steampowered.com/app/245170/Skullgirls/"},
+            {name: "terrariea", price: "  $10.00", link: "http://store.steampowered.com/app/105600/Terraria/"},
+            {name: "skyrum", price: "  $40.00", link: "http://store.steampowered.com/app/489830/The_Elder_Scrolls_V_Skyrim_Special_Edition/"},
+            {name: "falloot 5", price: "  $30.00", link: "http://store.steampowered.com/app/377160/Fallout_4/"},
+            {name: "minecrap", price: "  $26.95", link: "https://minecraft.net/en-us/"},
+            {name: "burderlunds 2", price: "  $20.00", link: "http://store.steampowered.com/app/49520/Borderlands_2/"},
+            {name: "half lif 3", price: "  $800.00", link: "http://knowyourmeme.com/memes/half-life-3-confirmed"},
+            {name: "Age of empir 2 aech dee edition", price: "  $20.00", link: "http://store.steampowered.com/app/221380/Age_of_Empires_II_HD/"},
+            {name: "dyin lihgt", price: "  $40.00", link: "http://store.steampowered.com/app/239140/Dying_Light/"},
+          ],
+          multip: [
+            {name: "team funtress 2", price: "  $free", link: "http://www.teamfortress.com/"},
+            {name: "ded by dedlight", price: "  $20.00", link: "http://store.steampowered.com/app/381210/Dead_by_Daylight/"},
+            {name: "overthot", price: "  $40.00", link: "https://playoverwatch.com/en-us/"},
+            {name: "minecrap", price: "  $26.95", link: "https://minecraft.net/en-us/"},
+            {name: "burderlunds 2", price: "  $20.00", link: "http://store.steampowered.com/app/49520/Borderlands_2/"},
+            {name: "paydai to", price: "  45.00", link: "http://store.steampowered.com/app/218620/PAYDAY_2/"},
+            {name: "Age of empir 2 aech dee edition", price: "  $20.00", link: "http://store.steampowered.com/app/221380/Age_of_Empires_II_HD/"},
+            {name: "dyin lihgt", price: "  $40.00", link: "http://store.steampowered.com/app/239140/Dying_Light/"},
+          ],
+        },
+      });
+    </script>
   </body>
 </html>

@@ -1,10 +1,16 @@
+body{
+  background-color: #212F3D
+}
+h1{
+  color: #1F618D;
+  font-weight: bold;
+}
 .top{
   display: flex;
   flex-direction: column;
 }
   .header{
   display: flex;
-  flex-direction: row;
 }
 .name{
   flex: 2;
@@ -12,22 +18,55 @@
 .cost{
   flex: 1;
 }
-.games{
+.singleplayer{
   display: flex;
   margin: 20px;
   padding: 2px;
-  border: 5px solid #696969;
-  box-shadow: 8px 8px 16px #dddddd;
+  border: 5px solid #000000;
+  box-shadow: 16px 16px 32px #8b0000;
+  background: #566573;
   flex-direction:column;
 }
-.games:before{
-  content: "games";
+
+.singleplayer:before{
+  content: "singleplayer";
   font-weight: bold;
-  background: #b22222;
+  background: #1F618D;
   color: #000000;
 }
+.multiplayer{
+  display: flex;
+  margin: 20px;
+  padding: 2px;
+  border: 5px solid #000000;
+  box-shadow: 16px 16px 32px #8b0000;
+  background: #566573;
+  flex-direction:column;
+}
 
-.game, .games:before{
+.multiplayer:before{
+  content: "multiplayer";
+  font-weight: bold;
+  background: #922B21;
+  color: #000000;
+}
+.fps{
+  display: flex;
+  margin: 20px;
+  padding: 2px;
+  border: 5px solid #000000;
+  box-shadow: 16px 16px 32px #8b0000;
+  background: #566573;
+  flex-direction:column;
+}
+
+.fps:before{
+  content: "effpeeess";
+  font-weight: bold;
+  background: #6C3483;
+  color: #000000;
+}
+.fps, .fps:before,.singleplayer, .singleplayer:before,.multiplayer, .multiplayer:before{
   flex: 1;
   padding: 0.5em;
 }
